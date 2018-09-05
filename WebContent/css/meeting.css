@@ -1,0 +1,23 @@
+.body1{
+	height: auto;
+	background: url(../img/login.png) no-repeat center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.table1{
+	/* border:solid thick #7EC0EE; */
+	margin-top:180px;
+}
+.formLogin{
+	margin-bottom:400px;
+}
+.tr{
+	display:block;
+	margin:10px;
+}
+.submit{
+	weight:320px;
+}

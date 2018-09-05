@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="false"></constant>
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<constant name="struts.action.extension" value="action"></constant>
+
+	<package name="struts" namespace="/" extends="struts-default">
+		<action name="login" class="action.LoginAction">
+			<result name="success">success.jsp</result>
+			<result name="input">login.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		<!-- 注册用户 -->
+		<action name="register" class="action.RegisterAction">
+			<result name="success">login.jsp</result>
+			<result name="error">register.jsp</result>
+		</action>
+		<!-- 查找用户 -->
+		<action name="findByUsernameAction" class="action.FindByUsernameAction">
+			
+		</action>
+		<!-- 查看用户详细资料 -->
+		<action name="personalProfileAction" class="action.PersonalProfileAction">
+		
+		</action>
+		<!-- 添加好友 -->
+		<action name="addFriendAction" class="action.AddFriendAction">
+			
+		</action>
+		<!-- 读取好友列表 -->
+		<action name="readFriendsList" class="action.ReadFriendsList">
+		
+		</action>
+	</package>
+</struts>

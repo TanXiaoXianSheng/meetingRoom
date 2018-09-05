@@ -1,0 +1,19 @@
+function sendText(){
+	$.ajax({
+		type:"POST",
+		url:"./sendTextServlet",
+		data:{
+			text:$("#text").val(),
+			receivePerson:$("#receivePerson").val(),
+		},
+		dataType:"text",
+		beforeSend:function(XMLHttpRequest){
+			//$("#show").text("loading...");
+		},
+		success:function(data,textStatus){
+			//$("#show").text(data);
+			$("#show").append(data);
+			$("#show").css("color","red");
+		},
+	});
+}

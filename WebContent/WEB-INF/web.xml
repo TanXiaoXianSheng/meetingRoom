@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>*.action</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>ImageServlet</servlet-name>
+    <servlet-class>servlet.ImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageServlet</servlet-name>
+    <url-pattern>/imageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>VerificationServlet</servlet-name>
+    <servlet-class>com.dw.servlet.VerificationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VerificationServlet</servlet-name>
+    <url-pattern>/verificationServlet</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>listener.OnlineUserListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>uploadServlet</servlet-name>
+    <servlet-class>servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>uploadServlet</servlet-name>
+    <url-pattern>/uploadServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 发送信息 -->
+  <servlet>
+    <servlet-name>sendTextServlet</servlet-name>
+    <servlet-class>servlet.SendTextServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sendTextServlet</servlet-name>
+    <url-pattern>/sendTextServlet</url-pattern>
+  </servlet-mapping>
+  
+<!--   <security-constraint>   
+       <web-resource-collection>   
+              <web-resource-name>SSL</web-resource-name>   
+              <url-pattern>/*</url-pattern>   
+       </web-resource-collection>  
+  
+       <user-data-constraint>   
+              <transport-guarantee>CONFIDENTIAL</transport-guarantee>   
+       </user-data-constraint>   
+</security-constraint>   -->
+</web-app>
